@@ -198,7 +198,7 @@ for rst in ensemble_results:
 from openai import OpenAI
 
 # OpenAI API 키를 환경변수에 설정
-os.environ["OPENAI_API_KEY"] = ""
+os.environ[""] = ""
 
 client = OpenAI()
 # 사용할 모델을 설정(여기서는 gpt-3.5-turbo-1106 모델 사용)
