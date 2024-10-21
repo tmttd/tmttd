@@ -13,7 +13,7 @@ import traceback
 # SetntenceTransformer를 이용하여 임베딩 생성
 def get_embedding(sentences):
     client = OpenAI(
-    api_key="up_OZFOByunbTwITSBgJGCeW64CesvMo",
+    api_key="",
     base_url="https://api.upstage.ai/v1/solar"
     )
     batch_embeddings = []
@@ -121,7 +121,7 @@ def ensemble_retrieve(query_str, sparse_size=20, dense_size=3):
 
 
 es_username = "elastic"
-es_password = "a_vQ1EC_x9an2dIAtoRZ"
+es_password = ""
 
 # Elasticsearch client 생성
 es = Elasticsearch(['https://localhost:9200'], basic_auth=(es_username, es_password), ca_certs="./elasticsearch-8.15.2/config/certs/http_ca.crt")
@@ -198,7 +198,7 @@ for rst in ensemble_results:
 from openai import OpenAI
 
 # OpenAI API 키를 환경변수에 설정
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = ""
 
 client = OpenAI()
 # 사용할 모델을 설정(여기서는 gpt-3.5-turbo-1106 모델 사용)
