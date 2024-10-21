@@ -6,10 +6,6 @@ from openai import OpenAI
 import numpy as np
 import traceback
 
-# Sentence Transformer 모델 초기화 (한국어 임베딩 생성 가능한 어떤 모델도 가능)
-# model = SentenceTransformer("snunlp/KR-SBERT-V40K-klueNLI-augSTS")
-# upstage embedding model
-
 # SetntenceTransformer를 이용하여 임베딩 생성
 def get_embedding(sentences):
     client = OpenAI(
@@ -194,7 +190,7 @@ for rst in ensemble_results:
     print('source:', rst["content"])
 
 
-# 아래부터는 실제 RAG를 구현하는 코드입니다.
+# 실제 RAG 구현 코드
 from openai import OpenAI
 
 # OpenAI API 키를 환경변수에 설정
